@@ -16,7 +16,7 @@ public class UserController {
     public ResponseUtil addUser(@RequestBody User user ){
         userService.addUser(user);
 
-        return new ResponseUtil("Okay")
+        return  new ResponseUtill("Okay","Added",null);
     }
 
 }
