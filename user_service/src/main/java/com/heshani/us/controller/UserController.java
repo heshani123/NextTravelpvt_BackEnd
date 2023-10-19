@@ -16,17 +16,17 @@ public class UserController {
     @PostMapping(value = "/add_user")
     public ResponseUtil addUser(@RequestBody User user ){
 
-        return  new  ResponseUtil("Okay","Added",userService.addUser(user));
+        return  new  ResponseUtil("Ok","Added",userService.addUser(user));
     }
     @PutMapping(value = "update_user")
     public ResponseUtil updateUser(@RequestBody User user){
         return new ResponseUtil("Okay","Updated",userService.updateUser(user));
     }
     @DeleteMapping(value = "/delete_user")
-    public ResponseUtill deleteUser(@RequestParam Integer id){
+    public ResponseUtil deleteUser(@RequestParam Integer id){
 
         userService.deleteUser(id);
-        return new ResponseUtil ("Okay","Deleted",null);
+        return new ResponseUtil("Ok","User Deleted",null);
     }
 
     @GetMapping(value = "/fetch_users")
@@ -42,4 +42,4 @@ public class UserController {
 
     }
 
-}
+
