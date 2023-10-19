@@ -1,5 +1,6 @@
 package com.heshani.us.controller;
 
+import com.heshani.us.service.UserService;
 import org.apache.catalina.User;
 import org.apache.tomcat.util.http.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
