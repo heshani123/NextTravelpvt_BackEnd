@@ -15,14 +15,12 @@ public class UserController {
 
     @PostMapping(value = "/add_user")
     public ResponseUtil addUser(@RequestBody User user ){
-        userService.addUser(user);
 
-        return  new ResponseUtil("Okay","Added",null);
+        return  new  ResponseUtil("Okay","Added",userService.addUser(user));
     }
     @PutMapping(value = "update_user")
     public ResponseUtil updateUser(@RequestBody User user){
-        userService.updateUser(user);
-        return new ResponseUtil("Okay","Updated",null);
+        return new ResponseUtil("Okay","Updated",userService.updateUser(user));
     }
     @DeleteMapping(value = "/delete_user")
     public ResponseUtill deleteUser(@RequestParam Integer id){
@@ -33,14 +31,14 @@ public class UserController {
 
     @GetMapping(value = "/fetch_users")
     public ResponseUtil fetchAllUsers() {
-        return new ResponseUtill("Okay","Done",userService.fetchAllUsers());
+        return new ResponseUtil ("Okay","Done",userService.fetchAllUsers());
     }
 
     @GetMapping(value = "/check")
-    public ResponseUtil checkLogin(@RequestBody loginDto loginDto) {
-        userService.checkLogin(loginDto.getUserName(),loginDto.getPassword());
-        return new ResponseUtil("Okay","Food have",null);
-
+    public ResponseUtil checkLogin(@RequestBody LoginDto loginDto) {
+        return new ResponseUtil ("OK", "Access Granted", userService.checkLogin(loginDto.getUserName()
+                , loginDto.getPassword()));
+    }
 
     }
 
