@@ -25,5 +25,10 @@ public  class UserServiceImpl implements UserService {
         }
         userRepository.deleteById(id);
     }
-
+    public Boolean checkLogin(String userName, String password) {
+        if (!userRepository.existsByUsername(userName)) {
+            throw new RuntimeException("User Not Found");
+        }
+        return userRepository.existsUserByUserNameAndPassword(userName, password);
+    }
 }

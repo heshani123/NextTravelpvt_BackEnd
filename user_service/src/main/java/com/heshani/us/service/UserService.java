@@ -6,4 +6,6 @@ public interface UserService {
     Object addUser(User user);
 
     void deleteUser(Integer id);
+
+    Object updateUser(User user);
 }
