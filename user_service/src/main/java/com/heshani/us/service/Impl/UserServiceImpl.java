@@ -12,10 +12,18 @@ public  class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     public User addUser(User user){
-        if (!userRepository.existsByUsername(user.getUserName())) {
+        if (!userRepository.existsByUsername(user.getUsername())) {
             throw new RuntimeException("User Not Found");
         }
         return userRepository.save(user);
 
     }
+    @Override
+    public void deleteUser(Integer id) {
+        if (!userRepository.existsById(id)) {
+            throw new RuntimeException("User Not Found");
+        }
+        userRepository.deleteById(id);
+    }
+
 }
