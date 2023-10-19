@@ -32,7 +32,7 @@ public class UserController {
 
     @GetMapping(value = "/fetch_users")
     public ResponseUtil fetchAllUsers() {
-        return new ResponseUtil ("Okay","Done",userService.fetchAllUsers());
+        return new ResponseUtil ("Okay","",userService.fetchAllUsers());
     }
 
     @GetMapping(value = "/check")
