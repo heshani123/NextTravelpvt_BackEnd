@@ -17,7 +17,7 @@ public class UserController {
     @PostMapping(value = "/add_user")
     public ResponseUtil addUser(@RequestBody User user ){
 
-        return  new  ResponseUtil("Ok","Added",userService.addUser(user));
+        return new ResponseUtil("OK", "Added", userService.addUser(user));
     }
     @PutMapping(value = "update_user")
     public ResponseUtil updateUser(@RequestBody User user){
@@ -38,7 +38,8 @@ public class UserController {
     @GetMapping(value = "/check")
     public ResponseUtil checkLogin(@RequestBody LoginDto loginDto) {
         return new ResponseUtil ("OK", "Access Granted", userService.checkLogin(loginDto.getuserName()
-                , loginDto.getPassword()));
+                , loginDto.getP
+                assword()));
     }
 
     }
