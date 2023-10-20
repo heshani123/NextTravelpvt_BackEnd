@@ -11,6 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Data
 @ToString
 public class ResponseUtil {
-
+    private String state;
 }
 
