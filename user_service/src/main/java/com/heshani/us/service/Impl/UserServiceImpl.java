@@ -29,7 +29,7 @@ public  class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Object updateUser(User user) {
+    public User updateUser(User user) {
         return null;
     }
 

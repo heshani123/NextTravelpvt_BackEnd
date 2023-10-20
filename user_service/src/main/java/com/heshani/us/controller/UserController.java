@@ -37,7 +37,7 @@ public class UserController {
 
     @GetMapping(value = "/check")
     public ResponseUtil checkLogin(@RequestBody LoginDto loginDto) {
-        return new ResponseUtil ("OK", "Access Granted", userService.checkLogin(loginDto.getUserName()
+        return new ResponseUtil ("OK", "Access Granted", userService.checkLogin(loginDto.getuserName()
                 , loginDto.getPassword()));
     }
 
