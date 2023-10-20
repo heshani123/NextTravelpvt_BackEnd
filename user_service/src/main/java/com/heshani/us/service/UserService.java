@@ -2,10 +2,15 @@ package com.heshani.us.service;
 
 import org.apache.catalina.User;
 
+import java.util.List;
+
 public interface UserService {
-    Object addUser(User user);
+    User addUser(User user);
 
-    void deleteUser(Integer id);
+   void deleteUser(Integer id);
 
-    Object updateUser(User user);
+    User updateUser(User user);
+
+
+   List<User> fetchAllUsers();
 }
