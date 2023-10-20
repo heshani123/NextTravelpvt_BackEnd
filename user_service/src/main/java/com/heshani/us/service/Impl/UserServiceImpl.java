@@ -27,6 +27,12 @@ public  class UserServiceImpl implements UserService {
         }
         userRepository.deleteById(id);
     }
+
+    @Override
+    public Object updateUser(User user) {
+        return null;
+    }
+
     public Boolean checkLogin(String userName, String password) {
         if (!userRepository.existsByUsername(userName)) {
             throw new RuntimeException("User Not Found");
