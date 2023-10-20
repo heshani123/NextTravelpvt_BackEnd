@@ -12,5 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @ToString
 public class ResponseUtil {
     private String state;
+    private String message;
+    private Object data;
 }
 
