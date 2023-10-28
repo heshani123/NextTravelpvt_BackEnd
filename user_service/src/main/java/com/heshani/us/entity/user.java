@@ -22,5 +22,5 @@ public class user {
     private String passWord;
     private  String role;
     private String proPicUrl;
-    private  String gender;
+
 }
