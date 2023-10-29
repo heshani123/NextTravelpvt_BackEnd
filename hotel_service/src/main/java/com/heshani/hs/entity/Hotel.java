@@ -20,4 +20,5 @@ public class Hotel {
     private Integer starRate;
     private String googleMapCoordinates;
     private String contact;
+    private String email;
 }
