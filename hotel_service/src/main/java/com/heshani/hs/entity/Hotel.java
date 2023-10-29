@@ -1,8 +1,7 @@
 package com.heshani.hs.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,4 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "hotel_details")
 public class Hotel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 }
