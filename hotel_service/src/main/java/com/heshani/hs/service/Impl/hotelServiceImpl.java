@@ -9,7 +9,7 @@ import java.util.List;
 
 public class hotelServiceImpl implements hotelService {
     @Autowired
-    private com.heshani.hs.repository.hotelRepository hotelRepository;
+    private hotelRepository hotelRepository;
 
     @Override
     public Hotel addHotel(Hotel hotel) {

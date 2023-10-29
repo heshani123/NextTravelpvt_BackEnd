@@ -1,6 +1,7 @@
 package com.heshani.hs.controller;
 
 import com.heshani.hs.entity.Hotel;
+import com.heshani.hs.service.hotelService;
 import com.heshani.hs.utill.ResponseUtill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/hotel")
 public class hotelController {
     @Autowired
-    private hotelService hotelService;
+    private com.heshani.hs.service.hotelService hotelService;
 
     @PostMapping(value = "/add_hotel")
     public ResponseUtill addHotel(@RequestBody Hotel hotel) {
