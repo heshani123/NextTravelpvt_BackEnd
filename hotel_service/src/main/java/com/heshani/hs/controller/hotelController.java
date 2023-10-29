@@ -1,5 +1,6 @@
 package com.heshani.hs.controller;
 
+import com.heshani.hs.entity.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
