@@ -15,5 +15,7 @@ public class Driver {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
+    private String contactNum;
+    private String address;
 
 }
