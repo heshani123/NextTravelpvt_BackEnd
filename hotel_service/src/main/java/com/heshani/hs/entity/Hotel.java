@@ -21,4 +21,8 @@ public class Hotel {
     private String googleMapCoordinates;
     private String contact;
     private String email;
+    private boolean petAreAllowed;
+    private double hotelFee;
+    private String cancellation_criteria;
+
 }
