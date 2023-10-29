@@ -39,4 +39,9 @@ public class DriverController {
         return driverService.fetchAllDriver();
     }
 
+
+    @GetMapping(value = "/check")
+    public Boolean checkDriverExists(@RequestParam Integer driverId, @RequestParam String name) {
+        return driverService.checkExistsDriver(driverId, name);
+    }
 }
