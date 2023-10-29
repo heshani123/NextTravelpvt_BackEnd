@@ -60,4 +60,10 @@ public class DriverController {
         return new ResponseUtil("OK", "Done", driverService.getAvailableDriver());
     }
 
+    @PutMapping(value = "/unavailable")
+    public ResponseUtil setUnavailableDriver(@RequestParam Integer id){
+        driverService.setUnavailableDriver(id);
+        return new ResponseUtil("OK", "Done", null);
+    }
+
 }
