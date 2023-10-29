@@ -18,5 +18,6 @@ public class Driver {
     private String contactNum;
     private String nic;
     private String address;
-
+    private String status;
+    private String drivingLicenseImg;
 }
