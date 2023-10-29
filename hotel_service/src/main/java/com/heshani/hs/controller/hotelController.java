@@ -2,7 +2,7 @@ package com.heshani.hs.controller;
 
 import com.heshani.hs.entity.Hotel;
 import com.heshani.hs.service.hotelService;
-import com.heshani.hs.utill.ResponseUtill;
+import com.heshani.hs.utill.ResponceUtill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,35 +11,35 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/hotel")
 public class hotelController {
     @Autowired
-    private com.heshani.hs.service.hotelService hotelService;
+    private hotelService hotelService;
 
     @PostMapping(value = "/add_hotel")
-    public ResponseUtill addHotel(@RequestBody Hotel hotel) {
-        return new ResponseUtill("Okay", "Done and Added", hotelService.addHotel(hotel));
+    public ResponceUtill addHotel(@RequestBody Hotel hotel) {
+        return new ResponceUtill("Okay", "Done and Added", hotelService.addHotel(hotel));
     }
 
     @PutMapping(value = "/update_hotel")
-    public ResponseUtill updateHotel(@RequestBody Hotel hotel) {
-        return new ResponseUtill("Okay", "Done and Added", hotelService.updateHotel(hotel));
+    public ResponceUtill updateHotel(@RequestBody Hotel hotel) {
+        return new ResponceUtill("Okay", "Done and Added", hotelService.updateHotel(hotel));
     }
 
     @DeleteMapping(value = "/delete_hotel")
-    public ResponseUtill deleteHotel(@RequestParam String hotelId) {
+    public ResponceUtill deleteHotel(@RequestParam String hotelId) {
         hotelService.deleteHotel(Integer.valueOf(hotelId));
-        return new ResponseUtill("Okay", "Done and Added", null);
+        return new ResponceUtill("Okay", "Done and Added", null);
     }
 
     @GetMapping(value = "/view_all")
-    public ResponseUtill fetchAllHotel() {
-        return new ResponseUtill("Ok", "Done", hotelService.fetchAllHotel());
+    public ResponceUtill fetchAllHotel() {
+        return new ResponceUtill("Ok", "Done", hotelService.fetchAllHotel());
     }
 
     @GetMapping
-    public ResponseUtill getHotelsByCategory(@RequestParam Integer starRate) {
-        return new ResponseUtill("Ok", "Done", hotelService.findAllByStarRate(starRate));
+    public ResponceUtill getHotelsByCategory(@RequestParam Integer starRate) {
+        return new ResponceUtill("Ok", "Done", hotelService.findAllByStarRate(starRate));
     }
     @GetMapping(value = "/search")
-    public ResponseUtill searchHotelById(@RequestParam Integer id){
-        return new ResponseUtill("Okay","Done",hotelService.searchHotel(id));
+    public ResponceUtill searchHotelById(@RequestParam Integer id){
+        return new ResponceUtill("Okay","Done",hotelService.searchHotel(id));
     }
 }
