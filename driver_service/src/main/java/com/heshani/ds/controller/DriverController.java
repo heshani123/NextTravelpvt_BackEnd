@@ -50,4 +50,10 @@ public class DriverController {
         driverService.updateDriver(driver);
         return new ResponseUtil("Okay", "Done", null);
     }
+
+    @GetMapping(value = "/search_driver")
+    public ResponseUtil searchDriverById(@RequestParam Integer driverId) {
+        return new ResponseUtil("Okay", "Done", driverService.searchDriver(driverId));
+    }
+
 }
