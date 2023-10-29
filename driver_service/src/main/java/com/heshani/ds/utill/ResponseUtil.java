@@ -11,5 +11,8 @@ import lombok.ToString;
 @Data
 @ToString
 public class ResponseUtil {
-    public String status;
+    private String status;
+    private String message;
+    private Object data;
+
 }
