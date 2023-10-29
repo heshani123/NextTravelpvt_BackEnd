@@ -1,6 +1,7 @@
 package com.heshani.hs.service.Impl;
 
 import com.heshani.hs.entity.Hotel;
+import com.heshani.hs.service.hotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

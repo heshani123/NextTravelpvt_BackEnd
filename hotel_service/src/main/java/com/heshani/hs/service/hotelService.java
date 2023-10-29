@@ -1,5 +1,7 @@
 package com.heshani.hs.service;
 
+import com.heshani.hs.entity.Hotel;
+
 import java.util.List;
 
 public interface hotelService {
