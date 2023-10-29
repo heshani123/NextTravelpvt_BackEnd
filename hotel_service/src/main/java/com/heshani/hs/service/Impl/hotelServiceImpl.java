@@ -1,6 +1,7 @@
 package com.heshani.hs.service.Impl;
 
 import com.heshani.hs.entity.Hotel;
+import com.heshani.hs.repository.hotelRepository;
 import com.heshani.hs.service.hotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 public class hotelServiceImpl implements hotelService {
     @Autowired
-    private hotelRepository hotelRepository;
+    private com.heshani.hs.repository.hotelRepository hotelRepository;
 
     @Override
     public Hotel addHotel(Hotel hotel) {
