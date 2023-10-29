@@ -44,4 +44,10 @@ public class DriverController {
     public Boolean checkDriverExists(@RequestParam Integer driverId, @RequestParam String name) {
         return driverService.checkExistsDriver(driverId, name);
     }
+    @PostMapping(value = "update_driver")
+    public ResponseUtil updateDriver(@RequestBody Driver driver) {
+
+        driverService.updateDriver(driver);
+        return new ResponseUtil("Okay", "Done", null);
+    }
 }
