@@ -1,4 +1,8 @@
 package com.heshani.hs.repository;
 
-public interface hotelRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface hotelRepository extends JpaRepository<Hotel,Integer> {
+
+
 }
