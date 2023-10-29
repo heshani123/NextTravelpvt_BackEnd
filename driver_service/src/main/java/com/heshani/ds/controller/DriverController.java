@@ -55,5 +55,9 @@ public class DriverController {
     public ResponseUtil searchDriverById(@RequestParam Integer driverId) {
         return new ResponseUtil("Okay", "Done", driverService.searchDriver(driverId));
     }
+    @GetMapping(value = "/available")
+    public ResponseUtil getAvailableDriver(){
+        return new ResponseUtil("OK", "Done", driverService.getAvailableDriver());
+    }
 
 }
