@@ -16,6 +16,7 @@ public class Driver {
     private Integer id;
     private String name;
     private String contactNum;
+    private String nic;
     private String address;
 
 }
