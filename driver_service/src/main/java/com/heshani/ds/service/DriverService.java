@@ -1,9 +1,12 @@
 package com.heshani.ds.service;
 
+import com.heshani.ds.entity.Driver;
+
 import java.util.List;
 
 public interface DriverService {
     Driver addDriver(Driver driver);
+
     List<Driver> fetchAllDriver();
     boolean checkExistsDriver(Integer driverId,String name);
     void updateDriver(Driver driver);
