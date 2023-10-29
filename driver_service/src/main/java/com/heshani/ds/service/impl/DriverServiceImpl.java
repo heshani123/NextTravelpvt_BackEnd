@@ -1,5 +1,6 @@
 package com.heshani.ds.service.impl;
 
+import com.heshani.ds.entity.Driver;
 import com.heshani.ds.repository.DriverRepository;
 import com.heshani.ds.service.DriverService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,7 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public Driver getAvailableDriver() {
+
         Driver availableDriver = driverRepo.findFirstAvailableDriver();
         if (availableDriver == null ){
             throw new RuntimeException("There is no available Driver at this moment");
