@@ -32,4 +32,5 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         travelPackageRepository.deleteById(id);
     }
 
+
 }
