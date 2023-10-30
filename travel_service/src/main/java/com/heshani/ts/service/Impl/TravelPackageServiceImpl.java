@@ -35,6 +35,7 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         travelPackageRepository.deleteById(id);
     }
 
+    @Override
     public List<TravelPackage> fetchAllPackages() {
         return travelPackageRepository.findAll();
     }
