@@ -1,5 +1,6 @@
 package com.heshani.ts.service.Impl;
 
+import com.heshani.ts.entity.TravelPackage;
 import com.heshani.ts.repository.TravelPackageRepository;
 import com.heshani.ts.service.TravelPackageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,6 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         travelPackageRepository.deleteById(id);
     }
 
-    @Override
     public List<TravelPackage> fetchAllPackages() {
         return travelPackageRepository.findAll();
     }
