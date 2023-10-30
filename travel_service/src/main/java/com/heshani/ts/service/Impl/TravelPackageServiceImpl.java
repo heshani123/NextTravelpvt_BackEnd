@@ -15,4 +15,13 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         }
         return travelPackageRepository.save(travelPackage);
     }
+
+    @Override
+    public TravelPackage updateTravelPackage(TravelPackage travelPackage) {
+        if (!travelPackageRepository.existsById(travelPackage.getId())) {
+            throw new RuntimeException("Package Not Found");
+        }
+        return travelPackageRepository.save(travelPackage);
+    }
+
 }
