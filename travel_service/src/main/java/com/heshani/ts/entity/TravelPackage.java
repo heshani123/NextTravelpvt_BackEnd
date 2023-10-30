@@ -16,5 +16,8 @@ public class TravelPackage {
     private int id;
     private String packageName;
     private Integer headCount;
+    private String packageCategory;
+    private Integer starRate;
+
 }
 
