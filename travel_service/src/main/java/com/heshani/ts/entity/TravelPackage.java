@@ -18,6 +18,7 @@ public class TravelPackage {
     private Integer headCount;
     private String packageCategory;
     private Integer starRate;
+    private String description;
 
 }
 
