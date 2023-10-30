@@ -26,6 +26,11 @@ public class CorsConfig {
 
     }
 
+    private void addAllowedHeader(String s) {
+    }
+
+    private void addAllowedOrigin(String s) {
+    }
 
 
 }
