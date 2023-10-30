@@ -13,6 +13,8 @@ import lombok.NoArgsConstructor;
 public class TravelPackage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
+    private int id;
+    private String packageName;
+    private Integer headCount;
 }
 
