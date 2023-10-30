@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface TravelPackageRepository extends JpaRepository<TravelPackage,Integer> {
+    Boolean existsByPackageName(String packageName);
 }
