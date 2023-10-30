@@ -8,4 +8,6 @@ public interface TravelPackageService {
     TravelPackage updateTravelPackage(TravelPackage travelPackage);
 
     void deletePackage(Integer id);
+
+    TravelPackage fetchPackageDetails(Integer id);
 }
