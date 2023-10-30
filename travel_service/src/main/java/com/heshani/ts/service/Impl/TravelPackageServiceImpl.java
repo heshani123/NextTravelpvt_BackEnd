@@ -24,4 +24,12 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         return travelPackageRepository.save(travelPackage);
     }
 
+    @Override
+    public void deletePackage(Integer id) {
+        if (!travelPackageRepository.existsById(id)) {
+            throw new RuntimeException("Package Not Found");
+        }
+        travelPackageRepository.deleteById(id);
+    }
+
 }
