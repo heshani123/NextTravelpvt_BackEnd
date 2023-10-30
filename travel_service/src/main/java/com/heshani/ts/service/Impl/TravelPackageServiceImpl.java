@@ -4,6 +4,8 @@ import com.heshani.ts.repository.TravelPackageRepository;
 import com.heshani.ts.service.TravelPackageService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 public class TravelPackageServiceImpl implements TravelPackageService {
     @Autowired
     private TravelPackageRepository travelPackageRepository;
@@ -30,6 +32,11 @@ public class TravelPackageServiceImpl implements TravelPackageService {
             throw new RuntimeException("Package Not Found");
         }
         travelPackageRepository.deleteById(id);
+    }
+
+    @Override
+    public List<TravelPackage> fetchAllPackages() {
+        return travelPackageRepository.findAll();
     }
 
 
