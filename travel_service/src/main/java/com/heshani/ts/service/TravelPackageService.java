@@ -6,4 +6,6 @@ public interface TravelPackageService {
     TravelPackage addTravelPackage(TravelPackage travelPackage);
 
     TravelPackage updateTravelPackage(TravelPackage travelPackage);
+
+    void deletePackage(Integer id);
 }
