@@ -39,5 +39,10 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         return travelPackageRepository.findAll();
     }
 
+    @Override
+    public TravelPackage fetchPackageDetails(Integer id) {
+        return travelPackageRepository.findById(id).get();
+    }
+
 
 }
